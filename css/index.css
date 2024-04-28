@@ -1,0 +1,153 @@
+:root {
+    --var-ff-base: "Nunito", sans-serif;
+
+    --var-fw-ultralighter: 200;
+    --var-fw-lighter: 300;
+    --var-fw-normal: 600;
+    --var-fw-bolder: 900;
+
+    --var-tc-black: black;
+
+    --var-fc-cream: #FFF5E0;
+    --var-fc-lime: #8DECB4;
+    --var-fc-lightgreen: #41B06E;
+    --var-fc-darkblue: #141E46;
+
+    --var-ph-15: 15px;
+
+    --var-pm-25: 25px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--var-tc-black);
+    font-family: var(--var-ff-base);
+
+    /* temporary */
+    color: var(--var-fc-cream);
+}
+
+/* ------------- NAVIGATION BAR ------------- */
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    align-items: center;
+}
+
+header h1{
+    color: var(--var-fc-lightgreen);
+    padding: var(--var-ph-15);
+    text-transform: uppercase;
+    font-weight: var(--var-fw-bolder);
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline-flex;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--var-fc-cream);
+    margin-right: 15px;
+    margin-left: 15px;
+    padding: var(--var-ph-15);
+    font-size: 1.5rem;
+    transition: 0.5s ease;
+    font-weight: var(--var-fw-normal);
+}
+
+.navbar a:hover {
+    color: var(--var-fc-lime);
+}
+
+/* ------------- MAIN SECTION ------------- */
+
+.main {
+    padding: var(--var-pm-25);
+    margin-top: 35px;
+    margin: 35px 25px 0;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    font-size: 45px;
+    text-align: center;
+}
+
+.intro h1, p {
+    font-weight: var(--var-fw-ultralighter);
+}
+
+.intro span {
+    font-weight: var(--var-fw-bolder);
+    text-transform: uppercase;
+    color: var(--var-fc-lightgreen);
+}
+
+.intro p {
+    margin-top: 25px;
+    font-size: 35px;
+    width: 75%;
+}
+
+/* ------------- MAIN CONTENT ------------- */
+
+/* .content, .layout-flex, .col {
+    outline: 2px solid peachpuff;
+} */
+
+.layout-flex {
+    display: flex;
+    gap: 20px;
+}
+
+.col {
+    background-color: var(--var-fc-darkblue);
+    border-radius: 50px;
+    padding: 25px;
+}
+
+.col h1 {
+    text-transform: uppercase;
+    font-weight: var(--var-fw-bolder);
+}
+
+/* ------------- MEDIA QUERIES ------------- */
+
+@media (max-width: 786px) {
+    header {
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    
+    .navbar ul li {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 690px) {
+    .layout-flex {
+        flex-direction: column;
+    }
+
+    .col h1 {
+        text-align: center;
+    }
+}
