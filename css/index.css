@@ -125,11 +125,17 @@ header h1{
 .col h1 {
     text-transform: uppercase;
     font-weight: var(--var-fw-bolder);
+    margin-bottom: 10px;
 }
 
 /* ------------- MEDIA QUERIES ------------- */
 
 @media (max-width: 786px) {
+
+    .intro {
+        font-size: 25px;
+    }
+
     header {
         justify-content: flex-start;
         flex-direction: column;
@@ -140,14 +146,63 @@ header h1{
         justify-content: center;
         text-align: center;
     }
+
+    .col h1 {
+        margin-bottom: 10px;
+    }
+
+    .col p {
+        text-align: justify;
+    }
 }
 
 @media (max-width: 690px) {
+
+    .intro, .intro p {
+        font-size: 1.8rem;
+    }
+
     .layout-flex {
         flex-direction: column;
     }
 
     .col h1 {
         text-align: center;
+        margin-bottom: 10px;
+        font-size: 1.85rem;
+    }
+
+    .col p {
+        text-align: justify;
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        font-size: 1.25rem;
+    }
+
+    .navbar ul li a {
+        font-size: 1.2rem;
+    }
+
+    .intro, .intro p {
+        font-size: 1.5rem;
+    }
+
+    .layout-flex {
+        flex-direction: column;
+    }
+
+    .col h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 1.35rem;
+    }
+
+    .col p {
+        font-size: 1rem;
+        text-align: justify;
     }
 }
